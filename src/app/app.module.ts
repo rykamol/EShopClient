@@ -1,3 +1,4 @@
+import { ProductService } from './services/product.service';
 import { MaterialModule } from './material/material.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
@@ -13,6 +14,7 @@ import { ProductAddComponent } from './components/product-add/product-add.compon
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SignupComponent } from './components/signup/signup.component';
 import { ProductDetailComponent } from './components/product-detail/product-detail.component';
+import { ProductUpdateComponent } from './components/product-update/product-update.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,8 @@ import { ProductDetailComponent } from './components/product-detail/product-deta
     ProductListComponent,
     ProductAddComponent,
     SignupComponent,
-    ProductDetailComponent
+    ProductDetailComponent,
+    ProductUpdateComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +36,7 @@ import { ProductDetailComponent } from './components/product-detail/product-deta
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [ProductService],
   bootstrap: [AppComponent],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA

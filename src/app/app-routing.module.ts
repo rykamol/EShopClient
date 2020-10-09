@@ -6,9 +6,11 @@ import { ShopModuleComponent } from './components/shop-module/shop-module.compon
 import { LoginComponent } from './components/login/login.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { ProductUpdateComponent } from './components/product-update/product-update.component';
 
 const routes: Routes = [
   {path:'',component:ShopModuleComponent},
+  { path: 'product-update/:id', component: ProductUpdateComponent },
   { path: 'product-detail/:id', component: ProductDetailComponent },
   {path:'product-add',component:ProductAddComponent},
   {path:'product-list',component:ProductListComponent},
